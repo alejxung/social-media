@@ -23,8 +23,10 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = async () => {
     const response = await fetch(
-      `https://us6zuw-3001.csb.app/users/${userId}`,
+      `https://xterid-3001.csb.app/users/${userId}`,
       {
+        // const response = await fetch(`http://localhost:3001/users/${userId}`, {
+
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       }
@@ -50,6 +52,7 @@ const UserWidget = ({ userId, picturePath }) => {
     impressions,
     friends,
   } = user;
+
   return (
     <WidgetWrapper>
       {/* FIRST ROW */}
@@ -74,7 +77,7 @@ const UserWidget = ({ userId, picturePath }) => {
             >
               {firstName} {lastName}
             </Typography>
-            <Typography color={medium}>{friends.length} friends </Typography>
+            <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>
         <ManageAccountsOutlined />
@@ -97,9 +100,8 @@ const UserWidget = ({ userId, picturePath }) => {
       <Divider />
 
       {/* THIRD ROW */}
-
-      <Box p="1rem 0 ">
-        <FlexBetween>
+      <Box p="1rem 0">
+        <FlexBetween mb="0.5rem">
           <Typography color={medium}>Who's viewed your profile</Typography>
           <Typography color={main} fontWeight="500">
             {viewedProfile}
@@ -117,7 +119,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
       {/* FOURTH ROW */}
       <Box p="1rem 0">
-        <Typography fontSize="1rem" color={main} fontWeight="500" sb="1rem">
+        <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
           Social Profiles
         </Typography>
 
@@ -134,7 +136,7 @@ const UserWidget = ({ userId, picturePath }) => {
           <EditOutlined sx={{ color: main }} />
         </FlexBetween>
 
-        <FlexBetween gap="1rem" mb="0.5rem">
+        <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
             <img src="../assets/linkedin.png" alt="linkedin" />
             <Box>

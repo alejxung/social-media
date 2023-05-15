@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 
 const UserImage = ({ image, size = "60px" }) => {
-  console.log(`${image}`);
   return (
     <Box width={size} height={size}>
       <img
@@ -9,7 +8,8 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://us6zuw-3001.csb.app/assets/${image}`}
+        // src={`http://localhost:3001/assets/${image}`}
+        src={`https://xterid-3001.csb.app/assets/p2.jpeg`}
       />
     </Box>
   );

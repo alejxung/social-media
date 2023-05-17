@@ -49,7 +49,12 @@ const Navbar = () => {
           fontSize="clamp(1rem, 2rem, 2.25rem)"
           color="primary"
           onClick={() => navigate("/home")}
-          sx={{ "&:hover": { color: primaryLight, cursor: "pointer" } }}
+          sx={{
+            "&:hover": {
+              color: primaryLight,
+              cursor: "pointer",
+            },
+          }}
         >
           StackLinkr
         </Typography>
@@ -135,7 +140,7 @@ const Navbar = () => {
             </IconButton>
           </Box>
 
-          {/* MENU ITMES */}
+          {/* MENU ITEMS */}
           <FlexBetween
             display="flex"
             flexDirection="column"

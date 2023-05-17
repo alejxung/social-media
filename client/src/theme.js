@@ -75,8 +75,8 @@ export const themeSettings = (mode) => {
           }),
     },
     typography: {
-      fontFamly: ["Rubik", "sans-serif"].join(","),
-      fontSizE: 12,
+      fontFamily: ["Rubik", "sans-serif"].join(","),
+      fontSize: 12,
       h1: {
         fontFamily: ["Rubik", "sans-serif"].join(","),
         fontSize: 40,
